@@ -1,0 +1,107 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Roboto', sans-serif;
+}
+body {
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #74b9ff;
+}
+.div-center {
+  width: 80%;
+  height: 60%;
+  background-color: #fff;
+  border: 5px solid #0984e3;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  flex-direction: column;
+  text-align: center;
+  box-shadow: 0 10px 10px rgba(0, 0, 0, 0.5);
+  position: relative;
+  overflow: hidden;
+  animation: anima 0.5s linear;
+}
+@keyframes anima {
+  0% {
+    transform: scale(0.8);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+#quotes {
+  font-size: 2em;
+  word-wrap: wrap;
+  margin: 20px;
+  z-index: 66;
+}
+#name {
+  position: absolute;
+  right: 30px;
+  bottom: 100px;
+  font-size: 1.1em;
+}
+#btn {
+  position: absolute;
+  left: 50%;
+  bottom: 30px;
+  transform: translateX(-50%);
+  width: 150px;
+  padding: 10px 20px;
+  border: none;
+  background-color: #0984e3;
+  color: #fff;
+  font-size: 1.2em;
+  box-shadow: 5px 10px 10px rgba(0, 0, 0, 0.5);
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 0.5s;
+}
+#btn:hover {
+  box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5);
+}
+#btn:focus {
+  outline: none;
+}
+
+#tweetBtn .fab {
+  position: absolute;
+  right: 7px;
+  top: 7px;
+  color: #1da1f2;
+  font-size: 1.5em;
+  cursor: pointer;
+  z-index: 999;
+}
+#tweetBtn::before {
+  content: '';
+  position: absolute;
+  top: 10px;
+  right: -30px;
+  width: 210px;
+  height: 100px;
+  background-color: #fff;
+  transform: rotate(45deg);
+  z-index: 5;
+}
+#tweetBtn::after {
+  content: '';
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  width: 100px;
+  height: 100px;
+  background-color: #eee;
+}
+@media only screen and (max-width: 768px) {
+  #quotes {
+    font-size: 1.3em;
+  }
+}
